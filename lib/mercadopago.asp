@@ -122,6 +122,30 @@ End Function
 	
 End Function
 
+
+'*
+'* Create a checkout custom
+'* @param String(Json-Format) preference
+'* @return String(Json-Format) result_pref
+'*
+ Function create_checkout_custom(preference) 
+ 
+	On error resume next
+        
+	Dim accessToken,method,url, result_pref
+	accessToken = get_access_token		
+			
+	method = "POST"
+	url = "/checkout/custom/create_payment?access_token=" & accessToken
+
+	result_pref = exec(method,url,MIME_JSON,preference)
+
+	If Err.number <> 0 then  Call  Error_Message()
+	
+	create_checkout_custom = result_pref
+	
+End Function
+
 '*
 '* Get information for specific payment
 '* @param int id
