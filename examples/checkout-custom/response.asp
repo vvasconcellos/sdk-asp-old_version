@@ -69,7 +69,7 @@
 	Dim response_json
 	Set mp = new Mercadopago
 			
-	mp.construct "1779081077221342", "i6U8UZMJSNvhNxm1zFcdhR0b4Fgtit2E"	
+	mp.construct "client_id", "client_secret"	
 	response_json=mp.create_checkout_custom(var_json)
 	
 	response.write response_json
