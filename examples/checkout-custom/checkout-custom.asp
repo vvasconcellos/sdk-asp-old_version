@@ -30,7 +30,7 @@
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://secure.mlstatic.com/org-img/checkout/custom/1.0/checkout.js"></script>
   <script type="text/javascript">
-    Checkout.setPublishableKey("2944885d-d35c-470f-8dba-9e15d622b1c1");
+    Checkout.setPublishableKey("public_key");
      
      $("input[data-checkout='cardNumber']").bind("keyup",function(){
       var bin = $(this).val().replace(/ /g, '').replace(/-/g, '').replace(/\./g, '');
